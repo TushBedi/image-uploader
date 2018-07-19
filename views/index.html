@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image Uploader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <header class="header">
+        Upload Your Images Here
+    </header>
+    <div class="container"> 
+        <div class="row">
+            <!-- Submit forms -->
+            <div class="col-3" id="upload-picture">Get Tokens
+
+                <form class="get-token">
+                    First name:<br>
+                    <input type="value" name="email"><br>
+                    Password:<br>
+                    <input type="password" name="password"><br>
+                </form>
+                <button type="submit" form="get-token" value="Submit">Submit</button>
+
+                <form class="upload-picutre">
+                    <input type="file">
+                </form>
+                <button v-on:click="reverseMessage" type="submit" form="get-token" value="Submit">Upload</button>                
+
+            </div>
+            <!-- Images -->
+            <div class="col-9">Images here 
+
+                <table style="width:100%">
+                    <tr>
+                        <td>image</td> 
+                        <td>image</td>
+                        <td>image</td>
+                    </tr>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td> 
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td> 
+                        <td>94</td>
+                    </tr>
+                </table>   
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Vue Script -->
+    <script type="text/javascript">
+        let app = new Vue ({
+            el:"#upload-picture",
+            data: {
+                message: "Get Tokens"
+            },
+            methods: {
+
+            }
+            
+
+        });
+        // let abc = ""
+    </script>
+</body>
+</html>
